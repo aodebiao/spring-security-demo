@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: security-demo
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///security-demo # 本机3306端口时，简写
+    username: root
+    password: 1460088689
+#  security:
+#    user:
+#      name: admin
+#      password: 111
+
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
