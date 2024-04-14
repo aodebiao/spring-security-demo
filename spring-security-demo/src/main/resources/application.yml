@@ -7,10 +7,10 @@ spring:
     url: jdbc:mysql:///security-demo # 本机3306端口时，简写
     username: root
     password: 1460088689
-#  security:
-#    user:
-#      name: admin
-#      password: 111
+  security:
+    user:
+      name: admin
+      password: '{bcrypt}$2a$10$DjOWSdVayrH0vNPCP/ilB.iBdr2qCf9t3Jp.4nPNDP1bV/Qzbgvb.'  # 必须加 引号
 
 
 mybatis-plus:

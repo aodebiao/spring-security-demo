@@ -17,16 +17,32 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 @EnableWebSecurity
 public class WebSecurityConfig {
 
-    @Bean
-    public UserDetailsService userDetailsService(){
-        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
-        UserDetails u = User.withUsername("user").password("bcrypt}$2a$10$dXJ3SW6G7P50lGmMkkmwe.20cQQubK3.HZWzG3YB1tlRy.fqvM/ BG").roles("USER").build();
-        manager.createUser(User.withUserDetails(u).build());
-        return manager;
-    }
+    /**
+     * 基于内存的用户认证
+     * @return
+     */
+//    @Bean
+//    public UserDetailsService userDetailsService(){
+//        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
+//        UserDetails u = User.withUsername("user").password("{bcrypt}$2a$10$dXJ3SW6G7P50lGmMkkmwe.20cQQubK3.HZWzG3YB1tlRy.fqvM/BG").roles("USER").build();
+//        manager.createUser(User.withUserDetails(u).build());
+//        return manager;
+//    }
+
+
+
+
+
     @Bean
     public PasswordEncoder passwordEncoder(){
         return PasswordEncoderFactories. createDelegatingPasswordEncoder();
+    }
+
+    public static void main(String[] args) {
+        PasswordEncoder delegatingPasswordEncoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
+        System.out.println(delegatingPasswordEncoder.encode("111"));
+        System.out.println(delegatingPasswordEncoder.encode("password"));
+        System.out.println(delegatingPasswordEncoder.encode("password"));
     }
 
 }
