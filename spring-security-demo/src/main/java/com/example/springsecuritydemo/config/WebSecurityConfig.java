@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.jaas.memory.InMemoryConfiguration;
+import org.springframework.security.config.Customizer;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -12,10 +14,27 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig {
+
+    /**
+     * 默念行为 ，不加也生效
+     * @param http
+     * @return
+     * @throws Exception
+     */
+    @Bean
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
+        http.authorizeHttpRequests(authorize -> authorize.anyRequest().authenticated())
+            .formLogin(Customizer.withDefaults()); // 注释此配置，会弹出默认的登录页面
+            // .httpBasic(Customizer.withDefaults());
+        return http.build();
+    }
+
+
 
     /**
      * 基于内存的用户认证
