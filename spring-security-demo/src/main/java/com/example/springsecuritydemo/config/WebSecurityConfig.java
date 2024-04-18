@@ -28,8 +28,17 @@ public class WebSecurityConfig {
      */
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
-        http.authorizeHttpRequests(authorize -> authorize.anyRequest().authenticated())
-            .formLogin(Customizer.withDefaults()); // 注释此配置，会弹出默认的登录页面
+        http.csrf(csrf -> csrf.disable())
+                .authorizeHttpRequests(authorize -> authorize.requestMatchers("/user/add").permitAll())
+                .authorizeHttpRequests(authorize -> authorize.anyRequest().authenticated())
+//            .formLogin(Customizer.withDefaults()); // 注释此配置，会弹出默认的登录页面
+            .formLogin(form -> {
+                form.loginPage("/login").permitAll()
+                        .usernameParameter("myusername") // 修改html 登录表单中的用户名和密码参数key
+                        .passwordParameter("mypassword")
+                        .failureUrl("/login?error111") // 用户名和密码输入错误时，浏览器的url，前端 通过 <div th:if="${param.error111}"> 错误的用户名和密码</div>,展示错误信息
+                ; // 自定义登录页面，需要手动施行，不然会无限重写向
+            }); // 自定义登录页面
             // .httpBasic(Customizer.withDefaults());
         return http.build();
     }
@@ -54,7 +63,7 @@ public class WebSecurityConfig {
 
     @Bean
     public PasswordEncoder passwordEncoder(){
-        return PasswordEncoderFactories. createDelegatingPasswordEncoder();
+        return PasswordEncoderFactories.createDelegatingPasswordEncoder();
     }
 
     public static void main(String[] args) {

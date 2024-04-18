@@ -4,9 +4,7 @@ package com.example.springsecuritydemo.controller;
 import com.example.springsecuritydemo.entity.User;
 import com.example.springsecuritydemo.service.UserService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,6 +18,11 @@ public class UserController {
     @GetMapping("/list")
     public List<User> list() {
         return userService.list();
+    }
+
+    @PostMapping("/add")
+    public void save(@RequestBody User user){
+        userService.saveUserDetails(user);
     }
 
 }
