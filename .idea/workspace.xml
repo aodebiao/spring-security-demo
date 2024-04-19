@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef9560b3-c1cd-43f8-8303-fb5c9daaed10" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/spring-security-demo/src/main/java/com/example/springsecuritydemo/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-demo/src/main/resources/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-security-demo/src/main/java/com/example/springsecuritydemo/config/MyAuthenticationFailureHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-security-demo/src/main/java/com/example/springsecuritydemo/config/MyAuthenticationSuccessHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-security-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-demo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-demo/src/main/java/com/example/springsecuritydemo/config/DBUserDetailsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-demo/src/main/java/com/example/springsecuritydemo/config/DBUserDetailsManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-security-demo/src/main/java/com/example/springsecuritydemo/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-demo/src/main/java/com/example/springsecuritydemo/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-demo/src/main/java/com/example/springsecuritydemo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-demo/src/main/java/com/example/springsecuritydemo/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-demo/src/main/java/com/example/springsecuritydemo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-demo/src/main/java/com/example/springsecuritydemo/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-demo/src/main/java/com/example/springsecuritydemo/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-demo/src/main/java/com/example/springsecuritydemo/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-demo/src/test/java/com/example/springsecuritydemo/SpringSecurityDemoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-demo/src/test/java/com/example/springsecuritydemo/SpringSecurityDemoApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -51,7 +46,16 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2fJpgM2oDGgFL4Q51pS8hgVGQfn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
@@ -60,16 +64,25 @@
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.SpringSecurityDemoApplication.executor": "JRebel Debug",
     "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "MavenSettings"
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.springsecuritydemo.config" />
+    </key>
   </component>
   <component name="RunManager" selected="Spring Boot.SpringSecurityDemoApplication">
     <configuration name="SpringSecurityDemoApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -108,8 +121,28 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ef9560b3-c1cd-43f8-8303-fb5c9daaed10" name="Changes" comment="" />
+      <created>1713529148209</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713529148209</updated>
+      <workItem from="1713529149942" duration="2018000" />
+    </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -118,6 +151,75 @@
           <url>jar://$PROJECT_DIR$/../../maven_repository/org/springframework/security/spring-security-crypto/6.2.3/spring-security-crypto-6.2.3-sources.jar!/org/springframework/security/crypto/bcrypt/BCrypt.java</url>
           <line>606</line>
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../maven_repository/org/springframework/security/spring-security-web/6.2.3/spring-security-web-6.2.3.jar!/org/springframework/security/web/authentication/AbstractAuthenticationProcessingFilter.class</url>
+          <line>86</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../maven_repository/org/springframework/security/spring-security-web/6.2.3/spring-security-web-6.2.3-sources.jar!/org/springframework/security/web/authentication/AbstractAuthenticationProcessingFilter.java</url>
+          <line>230</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../maven_repository/org/springframework/security/spring-security-web/6.2.3/spring-security-web-6.2.3-sources.jar!/org/springframework/security/web/authentication/UsernamePasswordAuthenticationFilter.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint type="java-method">
+          <url>jar://$PROJECT_DIR$/../../maven_repository/org/springframework/security/spring-security-core/6.2.3/spring-security-core-6.2.3-sources.jar!/org/springframework/security/authentication/AuthenticationManager.java</url>
+          <line>52</line>
+          <properties class="org.springframework.security.authentication.AuthenticationManager" method="authenticate">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint type="java-method">
+          <url>jar://$PROJECT_DIR$/../../maven_repository/org/springframework/security/spring-security-core/6.2.3/spring-security-core-6.2.3-sources.jar!/org/springframework/security/authentication/AuthenticationProvider.java</url>
+          <line>41</line>
+          <properties class="org.springframework.security.authentication.AuthenticationProvider" method="authenticate">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint type="java-method">
+          <url>jar://$PROJECT_DIR$/../../maven_repository/org/springframework/security/spring-security-core/6.2.3/spring-security-core-6.2.3-sources.jar!/org/springframework/security/authentication/dao/AbstractUserDetailsAuthenticationProvider.java</url>
+          <line>255</line>
+          <properties class="org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider" method="retrieveUser">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint type="java-method">
+          <url>jar://$PROJECT_DIR$/../../maven_repository/org/springframework/security/spring-security-core/6.2.3/spring-security-core-6.2.3-sources.jar!/org/springframework/security/core/userdetails/UserDetailsService.java</url>
+          <line>46</line>
+          <properties class="org.springframework.security.core.userdetails.UserDetailsService" method="loadUserByUsername">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint type="java-method">
+          <url>jar://$PROJECT_DIR$/../../maven_repository/org/springframework/security/spring-security-core/6.2.3/spring-security-core-6.2.3-sources.jar!/org/springframework/security/core/userdetails/UserDetailsChecker.java</url>
+          <line>40</line>
+          <properties class="org.springframework.security.core.userdetails.UserDetailsChecker" method="check">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint type="java-method">
+          <url>jar://$PROJECT_DIR$/../../maven_repository/org/springframework/security/spring-security-core/6.2.3/spring-security-core-6.2.3-sources.jar!/org/springframework/security/authentication/dao/AbstractUserDetailsAuthenticationProvider.java</url>
+          <line>111</line>
+          <properties class="org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider" method="additionalAuthenticationChecks">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
