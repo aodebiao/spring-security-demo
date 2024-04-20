@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef9560b3-c1cd-43f8-8303-fb5c9daaed10" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/spring-security-demo/src/main/java/com/example/springsecuritydemo/config/MyAuthenticationFailureHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-demo/src/main/java/com/example/springsecuritydemo/config/MyAuthenticationSuccessHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-security-demo/src/main/java/com/example/springsecuritydemo/config/MyAuthenticationEntryPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-security-demo/src/main/java/com/example/springsecuritydemo/config/MyLogoutSuccessHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-security-demo/src/main/java/com/example/springsecuritydemo/config/MySessionInformationExpiredStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-security-demo/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-demo/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-security-demo/src/main/java/com/example/springsecuritydemo/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-demo/src/main/java/com/example/springsecuritydemo/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-security-demo/src/main/java/com/example/springsecuritydemo/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-demo/src/main/java/com/example/springsecuritydemo/controller/IndexController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,36 +48,36 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2fJpgM2oDGgFL4Q51pS8hgVGQfn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JUnit.SpringSecurityDemoApplicationTests.contextLoads.executor": "Debug",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.SpringSecurityDemoApplication.executor": "JRebel Debug",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JUnit.SpringSecurityDemoApplicationTests.contextLoads.executor&quot;: &quot;Debug&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.SpringSecurityDemoApplication.executor&quot;: &quot;JRebel Debug&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
   </component>
@@ -137,7 +139,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1713529148209</updated>
-      <workItem from="1713529149942" duration="2018000" />
+      <workItem from="1713529149942" duration="5460000" />
+      <workItem from="1713619492582" duration="925000" />
     </task>
     <servers />
   </component>
@@ -151,21 +154,6 @@
           <url>jar://$PROJECT_DIR$/../../maven_repository/org/springframework/security/spring-security-crypto/6.2.3/spring-security-crypto-6.2.3-sources.jar!/org/springframework/security/crypto/bcrypt/BCrypt.java</url>
           <line>606</line>
           <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$PROJECT_DIR$/../../maven_repository/org/springframework/security/spring-security-web/6.2.3/spring-security-web-6.2.3.jar!/org/springframework/security/web/authentication/AbstractAuthenticationProcessingFilter.class</url>
-          <line>86</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$PROJECT_DIR$/../../maven_repository/org/springframework/security/spring-security-web/6.2.3/spring-security-web-6.2.3-sources.jar!/org/springframework/security/web/authentication/AbstractAuthenticationProcessingFilter.java</url>
-          <line>230</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$PROJECT_DIR$/../../maven_repository/org/springframework/security/spring-security-web/6.2.3/spring-security-web-6.2.3-sources.jar!/org/springframework/security/web/authentication/UsernamePasswordAuthenticationFilter.java</url>
-          <line>84</line>
-          <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint type="java-method">
           <url>jar://$PROJECT_DIR$/../../maven_repository/org/springframework/security/spring-security-core/6.2.3/spring-security-core-6.2.3-sources.jar!/org/springframework/security/authentication/AuthenticationManager.java</url>
