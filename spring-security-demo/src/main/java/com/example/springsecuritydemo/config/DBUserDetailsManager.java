@@ -34,6 +34,8 @@ public class DBUserDetailsManager implements UserDetailsManager {
             throw new UsernameNotFoundException(username);
         }
         Collection<GrantedAuthority> authorities = new ArrayList<>();
+//        authorities.add((GrantedAuthority) () -> "USER_LIST");
+        authorities.add((GrantedAuthority) () -> "USER_ADD");
         return new org.springframework.security.core.userdetails.User(user.getUsername(),user.getPassword(),user.getEnabled(),true,true,true,authorities);
     }
 

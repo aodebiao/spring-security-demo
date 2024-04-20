@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef9560b3-c1cd-43f8-8303-fb5c9daaed10" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/spring-security-demo/src/main/java/com/example/springsecuritydemo/config/MyAuthenticationEntryPoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-demo/src/main/java/com/example/springsecuritydemo/config/MyLogoutSuccessHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-demo/src/main/java/com/example/springsecuritydemo/config/MySessionInformationExpiredStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-demo/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-security-demo/src/main/java/com/example/springsecuritydemo/config/DBUserDetailsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-demo/src/main/java/com/example/springsecuritydemo/config/DBUserDetailsManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-security-demo/src/main/java/com/example/springsecuritydemo/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-demo/src/main/java/com/example/springsecuritydemo/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-demo/src/main/java/com/example/springsecuritydemo/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-demo/src/main/java/com/example/springsecuritydemo/controller/IndexController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +136,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713529148209</updated>
       <workItem from="1713529149942" duration="5460000" />
-      <workItem from="1713619492582" duration="925000" />
+      <workItem from="1713619492582" duration="3084000" />
     </task>
     <servers />
   </component>

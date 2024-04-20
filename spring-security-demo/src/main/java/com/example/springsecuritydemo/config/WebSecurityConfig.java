@@ -29,8 +29,13 @@ public class WebSecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
         http.csrf(csrf -> csrf.disable())
-                .authorizeHttpRequests(authorize -> authorize.requestMatchers("/user/add").permitAll())
-                .authorizeHttpRequests(authorize -> authorize.anyRequest().authenticated());
+                .authorizeHttpRequests(authorize -> authorize
+                        .requestMatchers("/user/add").hasAuthority("USER_ADD")
+                        .requestMatchers("/user/list").hasAuthority("USER_LIST")
+                        .anyRequest().authenticated()
+
+                );
+
 
 //            .formLogin(Customizer.withDefaults()); // 注释此配置，会弹出默认的登录页面
            http.formLogin(form -> {
