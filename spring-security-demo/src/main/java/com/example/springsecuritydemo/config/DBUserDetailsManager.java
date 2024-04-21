@@ -33,10 +33,21 @@ public class DBUserDetailsManager implements UserDetailsManager {
         if (Objects.isNull(user)){
             throw new UsernameNotFoundException(username);
         }
-        Collection<GrantedAuthority> authorities = new ArrayList<>();
+        // 测试，简单的硬编码权限
+//        Collection<GrantedAuthority> authorities = new ArrayList<>();
 //        authorities.add((GrantedAuthority) () -> "USER_LIST");
-        authorities.add((GrantedAuthority) () -> "USER_ADD");
-        return new org.springframework.security.core.userdetails.User(user.getUsername(),user.getPassword(),user.getEnabled(),true,true,true,authorities);
+//        authorities.add((GrantedAuthority) () -> "USER_ADD");
+//        return new org.springframework.security.core.userdetails.User(user.getUsername(),user.getPassword(),user.getEnabled(),true,true,true,authorities);
+
+        // 测试，简单的硬编码角色
+        return org.springframework.security.core.userdetails.User
+                .withUsername(user.getUsername())
+                .password(user.getPassword())
+                .disabled(!user.getEnabled())
+                .credentialsExpired(false)
+                .accountLocked(false)
+//                .roles("ADMIN")
+                .build();
     }
 
     @Override

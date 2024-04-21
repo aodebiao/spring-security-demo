@@ -37,8 +37,10 @@ public class WebSecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
         http.csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/user/add").hasAuthority("USER_ADD")
-                        .requestMatchers("/user/list").hasAuthority("USER_LIST")
+//                        .requestMatchers("/user/add").hasAuthority("USER_ADD")
+//                        .requestMatchers("/user/list").hasAuthority("USER_LIST")
+                                .requestMatchers("/user/**").hasRole("ADMIN")
+//                                .requestMatchers("/user/add").hasRole("")
                         .anyRequest().authenticated()
 
                 );

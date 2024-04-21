@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef9560b3-c1cd-43f8-8303-fb5c9daaed10" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/spring-security-demo/src/main/java/com/example/springsecuritydemo/config/MyAccessDeniedHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-security-demo/src/main/java/com/example/springsecuritydemo/config/DBUserDetailsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-demo/src/main/java/com/example/springsecuritydemo/config/DBUserDetailsManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-security-demo/src/main/java/com/example/springsecuritydemo/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-demo/src/main/java/com/example/springsecuritydemo/config/WebSecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -137,7 +137,7 @@
       <updated>1713529148209</updated>
       <workItem from="1713529149942" duration="5460000" />
       <workItem from="1713619492582" duration="3402000" />
-      <workItem from="1713666428942" duration="1288000" />
+      <workItem from="1713666428942" duration="2767000" />
     </task>
     <servers />
   </component>
