@@ -1,9 +1,13 @@
 package com.example.springsecuritydemo.config;
 
 
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.authentication.jaas.memory.InMemoryConfiguration;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -15,6 +19,9 @@ import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.access.AccessDeniedHandler;
+
+import java.io.IOException;
 
 @Configuration
 @EnableWebSecurity
@@ -57,6 +64,7 @@ public class WebSecurityConfig {
         http.exceptionHandling(e -> {
             // 处理未认证的请求
             e.authenticationEntryPoint(new MyAuthenticationEntryPoint());
+            e.accessDeniedHandler(new MyAccessDeniedHandler());
         });
 
         http.sessionManagement(session -> {
