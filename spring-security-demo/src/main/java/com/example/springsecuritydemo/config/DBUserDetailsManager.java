@@ -46,7 +46,9 @@ public class DBUserDetailsManager implements UserDetailsManager {
                 .disabled(!user.getEnabled())
                 .credentialsExpired(false)
                 .accountLocked(false)
-//                .roles("ADMIN")
+                .roles("ADMIN")
+
+                // .authorities("") // 尽量不要与roles方法同时使用
                 .build();
     }
 
